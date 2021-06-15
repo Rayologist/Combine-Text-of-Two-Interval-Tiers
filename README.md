@@ -1,2 +1,2 @@
 # Combine-Text-of-Two-Interval-Tiers
-This script is able to combine the texts of two interval tiers , and to add a midpoint.
+This praat script is able to combine texts of two interval tiers, and to add a midpoint.
