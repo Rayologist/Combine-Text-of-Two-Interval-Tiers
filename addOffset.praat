@@ -5,13 +5,13 @@ procedure insertBoundaryAndAddText: .numOfTier, .atTime, .textToSet$
 endproc
 
 
-procedure addOffset: .numOfTier, .numOfToken, .afterWhichWordPattern$, .textToSet$, .offsetTime
+procedure addOffset: .numOfTier, .numOfToken, .addAfter$, .textToSet$, .offsetTime
     numOfIntervals = Get number of intervals: .numOfTier
     timeToSetBoundary# = zero#(.numOfToken)
     count = 1
     for numOfInterval from 1 to numOfIntervals
         label$ = Get label of interval: .numOfTier, numOfInterval
-        if index_regex(label$, .afterWhichWordPattern$)
+        if index_regex(label$, .addAfter$)
             endTime = Get end time of interval: .numOfTier, numOfInterval
             timeToSetBoundary#[count] = endTime + .offsetTime
             count += 1
